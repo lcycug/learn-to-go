@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 type contactInfo struct {
-	email   string
-	zipCode int
+	Email   string `json:"Email"`
+	ZipCode int    `json:"ZipCode"`
 }
 
 type skillSet struct {
@@ -13,8 +13,7 @@ type skillSet struct {
 }
 
 type person struct {
-	lastName  string
-	firstName string
+	lastName, firstName string
 	contactInfo
 	skillSet
 }
@@ -45,8 +44,8 @@ func main() {
 		firstName: "Alex",
 		lastName:  "Harrison",
 		contactInfo: contactInfo{
-			zipCode: 123456,
-			email:   "test@test.com",
+			ZipCode: 123456,
+			Email:   "test@test.com",
 		},
 		skillSet: skillSet{
 			name: []string{
